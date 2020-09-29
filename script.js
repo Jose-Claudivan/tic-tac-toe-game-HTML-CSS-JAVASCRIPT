@@ -8,7 +8,14 @@ function selectSquare(id) {
 
     quadrado.innerHTML = player;
     quadrado.style.color = '#000';
+
+    if (player === 'X') {
+        player = 'O';
+    } else {
+        player = 'X';
+    }
     
+    changePlayer(player);
 }
 
 function changePlayer(valor) {
