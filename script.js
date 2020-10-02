@@ -37,6 +37,16 @@ function checkWinner() {
     var square7 = document.getElementById(7);
     var square8 = document.getElementById(8);
     var square9 = document.getElementById(9);
+
+    if (checkSequence(square1, square2, square3)) {
+        changeSquareColor(square1, square2, square3);
+    }
+}
+
+function changeSquareColor(square1, square2, square3) {
+    square1.style.color = '#0f8';
+    square2.style.color = '#0f8';
+    square3.style.color = '#0f8';
 }
 
 function checkSequence(square1, square2, square3) {
