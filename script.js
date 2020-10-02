@@ -1,10 +1,14 @@
 var player = null;
 var selectedPlayer = document.getElementById('jogador-selecionado')
+var squares = document.getElementsByClassName('quadrado');
 
-changePlayer(valor = 'X');
+changePlayer('X');
 
 function selectSquare(id) {
     var quadrado = document.getElementById(id);
+    if(quadrado.innerHTML !== '-') {
+        return;
+    }
 
     quadrado.innerHTML = player;
     quadrado.style.color = '#000';
@@ -21,4 +25,16 @@ function selectSquare(id) {
 function changePlayer(valor) {
     player = valor;
     selectedPlayer.innerHTML = player;
+}
+
+function checkWinner() {
+    var square1 = document.getElementById(1);
+    var square2 = document.getElementById(2);
+    var square3 = document.getElementById(3);
+    var square4 = document.getElementById(4);
+    var square5 = document.getElementById(5);
+    var square6 = document.getElementById(6);
+    var square7 = document.getElementById(7);
+    var square8 = document.getElementById(8);
+    var square9 = document.getElementById(9);
 }
