@@ -38,3 +38,13 @@ function checkWinner() {
     var square8 = document.getElementById(8);
     var square9 = document.getElementById(9);
 }
+
+function checkSequence(square1, square2, square3) {
+    var isEqual = false;
+
+    if(square1.innerHTML !== '-' && square1.innerHTML === square2.innerHTML && square2.innerHTML === square3.innerHTML) {
+        isEqual = true;
+    }
+
+    return isEqual;
+}
