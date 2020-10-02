@@ -10,43 +10,43 @@
     <h1>Jogo da Velha</h1>
 
     <div>
-        <div id="1" class="quadrado" onclick="selectSquare(this.id)">-</div>
-        <div id="2" class="quadrado" onclick="selectSquare(this.id)">-</div>
-        <div id="3" class="quadrado" onclick="selectSquare(this.id)">-</div>
+        <div id="1" class="square" onclick="selectSquare(this.id)">-</div>
+        <div id="2" class="square" onclick="selectSquare(this.id)">-</div>
+        <div id="3" class="square" onclick="selectSquare(this.id)">-</div>
     </div>
 
     <div>
-        <div id="4" class="quadrado" onclick="selectSquare(this.id)">-</div>
-        <div id="5" class="quadrado" onclick="selectSquare(this.id)">-</div>
-        <div id="6" class="quadrado" onclick="selectSquare(this.id)">-</div>
+        <div id="4" class="square" onclick="selectSquare(this.id)">-</div>
+        <div id="5" class="square" onclick="selectSquare(this.id)">-</div>
+        <div id="6" class="square" onclick="selectSquare(this.id)">-</div>
     </div>
 
     <div>
-        <div id="7" class="quadrado" onclick="selectSquare(this.id)">-</div>
-        <div id="8" class="quadrado" onclick="selectSquare(this.id)">-</div>
-        <div id="9" class="quadrado" onclick="selectSquare(this.id)">-</div>
+        <div id="7" class="square" onclick="selectSquare(this.id)">-</div>
+        <div id="8" class="square" onclick="selectSquare(this.id)">-</div>
+        <div id="9" class="square" onclick="selectSquare(this.id)">-</div>
     </div>
 
-    <div class="jogador">
+    <div class="player">
         <label>
             Jogador: 
         </label>
-        <label id="jogador-selecionado">
+        <label id="player-selecionado">
 
         </label>
     </div>
 
-    <div class="vencedor">
+    <div class="winner">
         <label>
             Vencedor: 
         </label>
-        <label id="vencedor-selecionado">
+        <label id="winner-selecionado">
 
         </label>
     </div>
 
     <div>
-        <button>
+        <button onclick="restart()">
             Reiniciar
         </button>
     </div>

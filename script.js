@@ -1,11 +1,16 @@
 var player, winner = null;
-var selectedPlayer = document.getElementById('jogador-selecionado');
-var selectedWinner = document.getElementById('vencedor-selecionado')
-var squares = document.getElementsByClassName('quadrado');
+var selectedPlayer = document.getElementById('player-selecionado');
+var selectedWinner = document.getElementById('winner-selecionado')
+var squares = document.getElementsByClassName('square');
 
 changePlayer('X');
 
 function selectSquare(id) {
+
+    if (winner !== null) {
+        return;
+    }
+
     var square = document.getElementById(id);
     if(square.innerHTML !== '-') {
         return;
@@ -52,15 +57,15 @@ function checkWinner() {
         return;
     }
 
-    if (checkSequence(square7, square8, square7)) {
-        changeSquareColor(square7, square8, square7);
+    if (checkSequence(square7, square8, square9)) {
+        changeSquareColor(square7, square8, square9);
         changeWinner(square7);
         return;
     }
 
-    if (checkSequence(square1, square4, square9)) {
-        changeSquareColor(square1, square4, square9);
-        changeWinner(square4);
+    if (checkSequence(square1, square4, square7)) {
+        changeSquareColor(square1, square4, square7);
+        changeWinner(square1);
         return;
     }
 
@@ -109,4 +114,18 @@ function checkSequence(square1, square2, square3) {
     }
 
     return isEqual;
+}
+
+function restart() {
+    winner = null;
+    selectedWinner.innerHTML = '';
+
+    for (var i = 1; i <= 9; i++) {
+        var  square = document.getElementById(i);
+        square.style.background = '#eee';
+        square.style.color = '#eee';
+        square.innerHTML = '-';
+    }
+
+    changePlayer('X');
 }
